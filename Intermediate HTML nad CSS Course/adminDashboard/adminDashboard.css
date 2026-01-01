@@ -1,0 +1,180 @@
+:root {
+    --primary-bg: #dadada;
+    --sidebar-color: #61bed7;
+    --accent-blue: #0984e3;
+    --text-main: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    font-family: Roboto;
+    color: var(--text-main);
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.header{
+    background-color: white;
+    color: black;
+}
+
+.header button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    padding: 10px;
+    background-color: var(--sidebar-color);
+    font-size: 20px;
+}
+
+.sidebar section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar span.icon {
+    margin-right: 10px;
+    filter: saturate(0) brightness(0) invert(1);
+}
+
+.sidebar span, p, h3 {
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-bar > .search{
+    flex-grow: 1;
+    display: flex;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.search input {
+    flex-grow: 1;
+}
+
+.search-bar > .user{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-bar > .user :nth-child(2){
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-bar > .buttons button{
+    background-color: var(--accent-blue);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    background-color: var(--primary-bg);
+    color: black;
+    margin: 10px;
+    gap: 10px;
+}
+
+.main h5{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.content-wrapper > .content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.content-wrapper > .content > div.card{
+    background-color: rgb(255, 255, 255);
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper .content .card button{
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    filter: saturate(0) brightness(0.8) invert(1);
+
+}
+
+.content-wrapper .content .card div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    /* background-color: rgb(255, 0, 0); */
+}
+
+.content-wrapper > .content > div.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;          /* This is the thickness of your gold bar */
+    background-color: gold;
+    /* We don't add border-radius here, so it stays perfectly straight! */
+}
+
+.right-sidebar > div {
+    padding-bottom: 10px;
+}
+
+.right-sidebar div.content{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    gap: 10px;
+    color: rgb(131, 131, 131);
+}
+
+
+.right-sidebar .content p:nth-child(3n+1){
+    color: black;
+}
+
+.right-sidebar .trending .card {
+    display: flex;
+    gap: 10px;
+}
